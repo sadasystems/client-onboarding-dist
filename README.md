@@ -8,4 +8,6 @@ This tool facilitates a secure, "Zero-Trust" deployment of migration tools. It u
 ## Quick Start
 Click the button below to launch the interactive validator in Google Cloud Shell:
 
-[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/YOUR-PUBLIC-ORG/YOUR-PUBLIC-REPO&cloudshell_tutorial=.cloudshell/tutorial.md)
+[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/sadasystems/client-onboarding-dist&cloudshell_tutorial=.cloudshell/tutorial.md)
+
+
