@@ -16,7 +16,6 @@ When the Cloud Shell window opens, a security dialog will appear. You **must** c
 If this box is not checked, the interactive tutorial and the installer script will fail to load.
 
 
-[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/sadasystems/client-onboarding-dist&cloudshell_tutorial=.cloudshell/tutorial.md)
-
+[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/sadasystems/client-onboarding-dist&cloudshell_workspace=.&cloudshell_tutorial=.cloudshell/tutorial.md)
 
 
