@@ -27,9 +27,7 @@ We need to identify which Google Cloud Project will host the migration infrastru
 2.  Select the **existing project** you intend to use for the Workspace Migration.
 3.  **Do not create a new project.** If you have not created a project yet, please do so in the Console before proceeding.
 
-<walkthrough-project-setup></walkthrough-project-setup>
-
-* **Tip:** If you don't see your specific project listed, ensure you are signed in with the correct account or check the main project selector in the top-blue header of the window.
+* **Tip:** If you don't see your specific project listed, ensure you are signed in with the correct account or check the main project selector in the top-blue header of the window, if it is showing.
 
 ## 3. Review Installer (Step 1 of 2)
 **Transparency Check & Troubleshooting**
