@@ -1,44 +1,54 @@
-# SADA Migration Validator
+# Insight Migration Validator
 
 ## 1. Welcome & Overview
-**Welcome to the SADA Migration Pre-Flight Check.**
+**Welcome to the Insight Migration Pre-Flight Check.**
 
-You are about to run an interactive security validator that checks your Google Cloud project against SADA's migration standards.
+You are about to run an interactive security validator to establish a **secure baseline** for your Workspace Migration project.
 
 **What this tool does:**
-1.  **Audits** your environment for security risks (Open Firewalls, Public IPs).
-2.  **Builds** missing infrastructure (Cloud NATs, IAP Tunnels) if you approve.
-3.  **Reports** compliance status in a JSON file.
+1.  **Audits** your selected project for security risks (e.g., Open Firewalls).
+2.  **Configures** missing secure infrastructure (e.g., Cloud NATs, IAP Tunnels) upon your approval.
+3.  **Reports** the final compliance status for the migration.
 
-**How it works:**
-* You are currently in a **Public Launcher**.
-* We will use a secure script to download the **Private SADA Tools** into this temporary session.
-* You will review the code, run it, and download the results.
+**How to run commands:**
+ throughout this tutorial, you will see code blocks with two buttons in the top-right corner:
+* **Copy to Cloud Shell (>_):** This types the command into your terminal window automatically. **You must still press `Enter` on your keyboard to execute it.**
+* **Copy to Clipboard:** Copies the text so you can paste it manually.
 
 **Click "Next" to begin.**
 
 ## 2. Project Selection
-**First, we need to know where to run these checks.**
+**Select your Migration Project.**
 
-In Google Cloud, all resources live inside a "Project". Please ensure the correct Project ID is selected in the dropdown below.
+We need to identify which Google Cloud Project will host the migration infrastructure. **You should have already created this project.**
+
+**Action Required:**
+1.  Click the dropdown menu below.
+2.  Select the **existing project** you intend to use for the Workspace Migration.
+3.  **Do not create a new project.** If you have not created a project yet, please do so in the Console before proceeding.
 
 <walkthrough-project-setup></walkthrough-project-setup>
 
-* **Tip:** If you don't see your project, check the dropdown in the top-blue bar of the console window.
+* **Tip:** If you don't see your specific project listed, ensure you are signed in with the correct account or check the main project selector in the top-blue header of the window.
 
 ## 3. Review Installer (Step 1 of 2)
-**Transparency Check**
+**Transparency Check & Troubleshooting**
 
 Before we download the private tools, you should know exactly what is running. The generic installer script (`bootstrap.sh`) is visible below.
 
 **It performs just two actions:**
 1.  **Authenticates:** It asks Google "Who is running this?" (You).
-2.  **Downloads:** It uses your identity to open a SADA Secret and fetch the secure tools.
+2.  **Downloads:** It uses your identity to open an Insight Secret and fetch the secure tools.
+
+**⚠️ Important Permission Note:**
+If you encounter errors (e.g., `Permission Denied` or `Secret Access Failed`) when running this script:
+* **Verify Identity:** Ensure you are running this session as the correct Principal/Email that was authorized to perform this script.
+* **Contact Support:** If you are using the correct identity but still face issues, **please talk to Insight for help** before attempting to run the script again.
 
 **Review the code:**
 ```bash
 #!/bin/bash
-# SADA Bootstrap Loader
+# Insight Bootstrap Loader
 # 1. Triggers Google Cloud Auth Popup
 gcloud config get-value project > /dev/null
 
@@ -89,7 +99,7 @@ cat sada-private-tools/WorkspaceMigrationPrecheck.sh | less
 ## 6. Execute Validator
 **It is time to audit your environment.**
 
-We will now run the interactive tool.
+We will now run the interactive tool against your selected project.
 
 **What to expect:**
 1.  **Select Persona:** Choose option **"2" (Client Lead)** to enable remediation features.
@@ -105,7 +115,7 @@ chmod +x WorkspaceMigrationPrecheck.sh
 ## 7. Finish & Report
 **Validation Complete.**
 
-The script has generated a JSON report file (e.g., `my-project-Preflight-Checklist.json`). You should download this file and send it to your SADA Engagement Manager.
+The script has generated a JSON report file (e.g., `my-project-Preflight-Checklist.json`). You should download this file and send it to your Insight Engagement Manager.
 
 **Click to download:**
 ```bash
